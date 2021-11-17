@@ -6,9 +6,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import com.picpay.carteiradigital.entities.EntitiesFactory;
-import com.picpay.carteiradigital.util.ApplicationConfigIT;
+import com.picpay.carteiradigital.util.ConfigIT;
 
-class HistoricoServiceIT extends ApplicationConfigIT {
+class HistoricoServiceIT extends ConfigIT {
 
 	@Test
 	@DisplayName("Deve retornar historico pelo id do usuário.")

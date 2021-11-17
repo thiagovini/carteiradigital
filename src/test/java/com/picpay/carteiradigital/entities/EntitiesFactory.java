@@ -21,9 +21,17 @@ public class EntitiesFactory {
 		return repository.save(carteira);
 	}
 
-	public static Historico umHistorico() {
+	public static Historico.HistoricoBuilder umHistoricoBuilder() {
 		return Historico.builder().id(UUID.randomUUID().toString()).usuarioId(UUID.randomUUID().toString())
-				.tipoTransacao(TipoTransacaoEnum.SAQUE).data(ZonedDateTime.now()).valor(100.0).build();
+				.tipoTransacao(TipoTransacaoEnum.SAQUE).data(ZonedDateTime.now()).valor(100.0);
+	}
+	
+	public static Historico umHistorico() {
+		return umHistoricoBuilder().build();
+	}
+	
+	public static Historico umHistorico(String usuarioId) {
+		return umHistoricoBuilder().usuarioId(usuarioId).build();
 	}
 
 	public static Historico umHistoricoMensageria() {
@@ -32,16 +40,38 @@ public class EntitiesFactory {
 				.nomeTransferidor("Outro Usuario").valor(100.0).build();
 	}
 
-	public static Carteira umaCarteira() {
+	public static Carteira.CarteiraBuilder umaCarteiraBuilder() {
 
 		return Carteira.builder().id(UUID.randomUUID().toString()).usuarioId(UUID.randomUUID().toString())
-				.numeroConta("12345").saldoTotal(100.0).build();
+				.numeroConta("12345").saldoTotal(100.0);
+
+	}
+
+	public static Carteira umaCarteira() {
+
+		return umaCarteiraBuilder().build();
+
+	}
+
+	public static Carteira umaOutraCarteiraComUsuario(String usuarioId) {
+
+		return umaCarteiraBuilder().usuarioId(usuarioId).numeroConta("54321").build();
+
+	}
+
+	public static Carteira umaCarteira(String usuarioId) {
+
+		return umaCarteiraBuilder().usuarioId(usuarioId).build();
 
 	}
 
 	public static Usuario umUsuario() {
 		return Usuario.builder().id(UUID.randomUUID().toString()).nome("Nome").sobrenome("Sobrenome").cpf("123")
 				.build();
+	}
+
+	public static Usuario umOutroUsuario() {
+		return Usuario.builder().id(UUID.randomUUID().toString()).nome("Outro").sobrenome("Usuario").cpf("321").build();
 	}
 
 }

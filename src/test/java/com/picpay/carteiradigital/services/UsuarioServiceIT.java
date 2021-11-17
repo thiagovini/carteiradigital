@@ -11,9 +11,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import com.picpay.carteiradigital.util.ApplicationConfigIT;
+import com.picpay.carteiradigital.util.ConfigIT;
 
-class UsuarioServiceIT extends ApplicationConfigIT {
+class UsuarioServiceIT extends ConfigIT {
 
 	@Test
 	@DisplayName("Deve retornar um usuário.")

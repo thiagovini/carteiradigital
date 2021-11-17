@@ -3,6 +3,7 @@ package com.picpay.carteiradigital.util;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.SpyBean;
 import org.springframework.test.context.ActiveProfiles;
@@ -17,7 +18,8 @@ import com.picpay.carteiradigital.services.UsuarioService;
 @SpringBootTest
 @ActiveProfiles(profiles = "test")
 @Transactional
-public abstract class ApplicationConfigIT {
+@AutoConfigureMockMvc
+public abstract class ConfigIT {
 
 	@SpyBean
 	@Autowired

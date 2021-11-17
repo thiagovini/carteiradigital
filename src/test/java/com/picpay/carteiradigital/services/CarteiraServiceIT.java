@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import com.picpay.carteiradigital.entities.EntitiesFactory;
-import com.picpay.carteiradigital.util.ApplicationConfigIT;
+import com.picpay.carteiradigital.util.ConfigIT;
 
-class CarteiraServiceIT extends ApplicationConfigIT {
+class CarteiraServiceIT extends ConfigIT {
 	
 	@Test
 	void deveTransferirValor() throws Exception {
