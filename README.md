@@ -2,11 +2,9 @@
 
 <h3>Passo a passo para executar projeto localmente: </h3>
 
-- Baixe o repositorio e abra-o em seu editor.
+- Baixe o repositório e abra-o em seu editor.
 
-- exite um arquivo docker-compose.yml no repositorio github do projeto. Abra o seu terminal e na pasta onde o mesmo esta localizado inicialize utilizando
-o comando "docker-compose up -d". Essa etapa vai fazer com que seja inicializado o postgres para a persistencia dos dados e rabbitmq para que possamos utilizar 
-o comando assíncrono.
+- exite um arquivo docker-compose.yml no repositorio github do projeto. Abra o seu terminal e navegue até a pasta onde o arquivo docker está localizado e inicialize utilizando o comando "docker-compose up -d". Essa etapa vai fazer com que seja inicializado o postgres (persistencia dos dados) e rabbitmq utilização do comando assíncrono).
 
 -Inicialize o projeto.
 
@@ -31,12 +29,12 @@ Através da ferramenta de versionamento de dados FlyWay,já serão inicializados
 
 <h4>obs.: Utilize os dados acima para testes no swagger</h4>
 
-note que ao selecionar qual o endpoint para ser testado, o swagger já irá informar quais os dados que ele esta esperando para a operação:
+note que ao selecionar qual o endpoint que será testado, o swagger já irá informar quais os dados que ele esta esperando para a operação:
 
 ![sacar_endpoint](https://user-images.githubusercontent.com/69025247/142255694-ccabb3c1-9420-491a-8ab1-342731278883.jpeg)
 
-clique no botão "try it out" substitua o dados e depois clique em "execute", conforme imagem abaixo (Como exemplo, usarei o usuário Thiago Silveira, conforme
-table usuário):
+clique no botão "try it out" substitua os dados e depois clique em "execute", conforme imagem abaixo (Como exemplo, usarei o usuário Thiago Silveira, conforme
+tabela usuário):
 
 ![execute](https://user-images.githubusercontent.com/69025247/142256312-fd2e80d5-e67e-4485-8ecb-e81a4fedca76.jpeg)
 
@@ -49,7 +47,7 @@ Após executar o comando, você poderá utilizar o endpoint "BuscaSaldo" para po
 - Para testar menssagens assíncontra, utilizaremos o rabbitmq. Uma vez startado o docker-compose-yml note que foi iniciado uma imagem do rabbitmq que esta sendo executado na porta 15672. Abra o browser no link: http://localhost:15672/#/queues
 
 <h5>Cenário da messangem assíncrona</h5>
-O cenário para essa mensagem é a transferencia entre bancos diferentes.
+- O cenário para essa mensagem é a transferencia entre bancos diferentes.
 
 Note que ao abrir o link do rabbitmq você estará com as informações da imagem abaixo:
 
@@ -69,4 +67,4 @@ Utilize o modelo abaixo como exemplo, troque para as informações desejadas con
     
 ![teste _rabbitmq](https://user-images.githubusercontent.com/69025247/142259099-89c5138d-5aa9-4c99-b1e9-981abd293138.jpeg)
 
-Depois disso, cheque o novo saldo do usuario que recebeu a transferencia e o histórico para o mesmo.
+Depois disso, cheque o novo saldo do usuário que recebeu a transferência e o histórico para o mesmo.
