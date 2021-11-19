@@ -46,6 +46,9 @@ Após executar o comando, você poderá utilizar o endpoint "BuscaSaldo" para po
 
 - Para testar menssagens assíncontra, utilizaremos o rabbitmq. Uma vez startado o docker-compose-yml note que foi iniciado uma imagem do rabbitmq que esta sendo executado na porta 15672. Abra o browser no link: http://localhost:15672/#/queues
 
+- login: guest
+- senha: guest
+
 <h5>Cenário da messangem assíncrona</h5>
 - O cenário para essa mensagem é a transferencia entre bancos diferentes.
 
@@ -54,6 +57,8 @@ Note que ao abrir o link do rabbitmq você estará com as informações da image
 ![rabbitmq](https://user-images.githubusercontent.com/69025247/142257927-7c19043e-03bc-4019-aeb8-1fd634bd2f91.jpeg)
 
 Clique em "outro banco" e você será redirecionado para outra aba para que possa ser feito a postagem de uma nova mensagem.
+
+<h4>Obs.: Caso não haja essa fila com o nome "outro-banco", você pode criar manualmente clicando em "Add a new queue" e informando somente o nome da fila.</h4>
 
 ![postar_mensagem](https://user-images.githubusercontent.com/69025247/142258532-cf7fccce-2d00-42c2-a02a-cf828ac63434.jpeg)
 
